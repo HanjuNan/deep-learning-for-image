@@ -2,7 +2,7 @@
 *.idea
 __pycache__
 *.zip
-flower_data
+#flower_data
 data_set
 *.h5
 *.pth
