@@ -3,6 +3,7 @@
 __pycache__
 *.zip
 #flower_data
+starts_data
 data_set
 *.h5
 *.pth
