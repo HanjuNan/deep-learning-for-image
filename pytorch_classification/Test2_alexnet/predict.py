@@ -36,7 +36,7 @@ def main():
     class_indict = json.load(fp=json_file)
 
     # create model
-    model = AlexNet(num_classes=2).to(device)
+    model = AlexNet(num_classes=5).to(device)
 
     # load model weights
     weights_path = "./AlexNet.pth"
@@ -57,7 +57,7 @@ def main():
         format(class_indict[str(predict_cla)],predict[predict_cla].numpy())
     plt.title(print_res)
     for i in range(len(predict)):
-        print("class: {:2}   prob: {:.3}".format(class_indict[str(i)],
+        print("class: {:5}   prob: {:.3}".format(class_indict[str(i)],
                                                   predict[i].numpy()))
     plt.show()
 

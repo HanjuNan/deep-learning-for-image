@@ -39,7 +39,7 @@ def main():
     # print("os.join = ",os.path.join(os.getcwd(),"../../"))
     # print("data_root = ",data_root)
     # data_root = C:\Users\Administrator\Desktop\deep-learning-for-image
-    image_path = os.path.join(data_root,"data_set","starts_data") # flower data set path
+    image_path = os.path.join(data_root,"data_set","flower_data") # flower data set path
     assert os.path.exists(image_path),"{} path does not exist.".format(image_path)
 
     train_path = os.path.join(image_path,"train")
@@ -109,7 +109,7 @@ def main():
     # imshow(torchvision.utils.make_grid(tensor=test_image))
 
     # 定义网络
-    net = AlexNet(num_classes=2,init_weight=True)
+    net = AlexNet(num_classes=5,init_weight=True)
     net.to(device)
     # 定义损失函数
     loss_function = nn.CrossEntropyLoss()
